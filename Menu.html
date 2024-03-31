@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miselanea de ejercicios</title>
+</head>
+<body>
+
+<script>
+    do {
+        opcion = Number(prompt("Bienvenido elija una opcion\
+        1. Operadores\
+        2. Condicionales\
+        3. Ciclos"))
+
+        switch(opcion){
+            case 1: 
+            elecion = Number(prompt("Elija el ejercicio que desea ver\
+            1. Area de un tringulo\
+            2. Suma de dos numeros ingresados\
+            3. Número elevado al cuadrado\
+            4. Conversor de euros a dolares\
+            5. Area y perimetro del cuadrado\
+            6. Área y el volúmen de un cilindro\
+            7. Longitud y area del circulo\
+            8. Promedio de tres numeros\
+            0. Volver"))
+            switch(elecion){
+        case 1: // FUNCION 1
+    function areadeltriangulo (base, altura){
+    return (base * altura) / 2
+}
+
+function areatriangulo (base , altura){
+    const resultado = areadeltriangulo (base, altura)
+    console.log("El resultado del area del triangulo es: ", resultado)
+}
+
+console.log("1. Calcular el area del triangulo");
+altura = Number(prompt("ingrese altura"))
+base = Number(prompt("ingrese base"))
+
+areatriangulo (base, altura)
+break
+        case 2: // FUNCION 2
+
+        function suma(uno, dos){
+        return uno + dos
+}
+function resultadosuma (uno, dos){
+const  resultado= suma (uno, dos)
+    console.log("El total de la suma es: ", resultado)
+}
+console.log("2. sumar dos numeros: ")
+uno = Number(prompt("Ingrese primer numero: "))
+dos = Number(prompt("Ingrese segundo numero: "))
+
+resultadosuma(uno, dos)
+break
+        case 3: // FUNCION 3
+        function elevado(num){
+        return num *num
+}
+function imprimirnum (num) {
+    const resultado = elevado(num)
+    console.log("El numero ", num, "elevado al cuadrado es: ", resultado)
+}
+console.log("3. Numero elevado al cuadrado")
+num = Number(prompt("Ingrese un numero: "))
+
+imprimirnum(num)
+break
+        case 4: // FUNCION 4
+        function cambiodolar(valor){
+        return valor * 1.08
+}
+function regresavalor(valor){
+    const resultado = cambiodolar(valor)
+    console.log(valor, "en dolares es: ", resultado)
+}
+function cambioeuro(valor){
+    return valor * 0.92
+}
+function regresavalor2(valor){
+    const resultado2 = cambioeuro(valor)
+    console.log(valor, "en euros es: ", resultado2)
+}
+
+console.log("4. Euros a Dolares")
+valor = Number(prompt("Ingrese el valor que desea convertir: "))
+num = Number(prompt("Escriba (1) si desea cambiar euros a dolares o (2) para dolares a euros"))
+switch (num){
+    case 1:
+        regresavalor(valor)
+        break;
+
+    case 2:
+            regresavalor2(valor)
+            break;
+
+    default:
+                console.log("No existe esa opcion")
+}
+        break
+        case 5: // FUNCION 5
+        function Area(lado){
+        return lado * lado
+}
+function perimetro(lado){
+    return lado + lado + lado + lado
+}
+
+function totalarea(lado){
+    const resultado_area = Area(lado)
+    console.log("El area del cuadrado es: ",resultado_area)
+}
+
+function totalPeri(lado){
+    const resultado_perimetro = perimetro(lado)
+    console.log("El perimetro del cuadrado es: ", resultado_perimetro)
+}
+console.log("5. Area y Perimetro del cuadrado")
+lado = Number(prompt("Ingrese la medida del lado del cuadrado: "))
+
+totalarea(lado)
+totalPeri(lado)
+break
+        case 6: // FUNCION 6
+const PI=3.14
+function Areacilindro(radio, altura){
+    return (2*PI*radio*altura+(2*PI*(radio * radio)))
+}
+function volumen(radio, altura){
+    return (PI*(radio * radio)*altura)
+}
+
+function resultarea(radio, altura){
+    const result_area = Areacilindro(radio, altura)
+    console.log("El área del cilindro es: ",result_area)
+}
+function resultvolumen(radio, altura){
+    const result_volu = volumen(radio, altura)
+    console.log("El volumen del cilindro es: ",result_volu)
+}
+
+console.log("6. Área y el volúmen de un cilindro: ")
+radio = Number(prompt("Ingrese el valor del radio: "))
+altura = Number(prompt("Ingrese el valor de la altura: "))
+
+resultarea(radio, altura)
+resultvolumen(radio, altura)
+break
+        case 7: // FUNCION 7
+        const PI2=3.14
+
+function longitud(radio){
+    return (radio * 2) * PI2
+}
+function area(radio){
+    return (PI2 * (radio*radio))
+}
+
+function printlongi(radio){
+    const result_longi = longitud(radio)
+    console.log("La longitud del circulo es: ",result_longi)
+}
+function printarea(radio){
+    const result_area = area(radio)
+    console.log("El area del circulo es: ",result_area)
+}
+console.log("7. Longitud y area del circulo")
+radio = Number(prompt(" ingrese la medida del radio: "))
+
+printlongi(radio)
+printarea(radio)
+        break
+        case 8: // FUNCION 8
+    function Promedio(num1, num2, num3){
+    return (num1 + num2 + num3)/3
+}
+function printpromedio(num1, num2, num3){
+    const resultado = Promedio(num1, num2, num3)
+    console.log("El promedio de los tres numeros es: ", resultado)
+}
+console.log("8. Promedio de tres numeros")
+num1 = Number(prompt("Ingrese el primer numero: "))
+num2 = Number(prompt("Ingrese el segundo numero: "))
+num3 = Number(prompt("Ingrese el tercer numero: "))
+
+printpromedio(num1, num2, num3)
+        break
+        default:
+            console.log("Hasta luego")
+        }
+            break
+            case 2:
+            elecion1 = Number(prompt("Elija el ejercicio que desea ver\
+            1. Determinar si el numero es negativo o positivo\
+            2. Determinar que numero es mayor y menor\
+            3. Determinar entre tres numeros cual es el mayor y el menor\
+            4. Dados dos numeros restar o sumar\
+            5. Cociente de dos numeros\
+            6. Suma o multiplicacionde dos numeros\
+            7. Año bisiesto\
+            0. Volver"))
+            switch(elecion1){
+            case 1: //FUNCION 1
+    function condicional(numero){
+    if (numero > 0 ) {
+        console.log ("Su numero es positivo");
+    }
+    else {
+        console.log ("su numero es negativo");
+    };
+}
+
+console.log ("1. Determinar si el numero es negativo o positivo")
+numero = Number(prompt("Ingrese un numero positivo y negativo"))
+
+condicional(numero)
+            break      
+            case 2: //FUNCION 2
+    function Determinar(num1, num2){
+    if (num1 < num2) {
+        console.log(num1 + " Es el numero menor " + "y " + num2 + " es el mayor " )
+    }
+    else {
+        console.log( num1 + " Es el numero mayor " + "y " + num2 + " este es el menor")
+    }
+    
+}
+console.log(" 2. Determinar que numero es mayor y menor")
+num1 = Number(prompt("ingrese el primer numero: "))
+num2 = Number(prompt("Ingrese el segundo numero: "))
+
+Determinar(num1, num2)
+
+            break        
+            case 3: //FUNCION 3
+    function numeros(num1, num2, num3){
+    if (num1 < num2) {
+        menor = num1
+    }
+    else {
+        menor = num2 
+    }
+    
+    if (menor < num3) {
+        menor = menor 
+    }
+    else {
+        menor = num3 
+    }
+    if (num1 > num2) {
+        mayor = num1
+    }
+    else {
+        mayor = num2
+    }
+    
+    if (mayor > num3) {
+        mayor = mayor
+    } 
+    else {
+        mayor = num3
+    }
+
+    console.log (" El numero menor es : " + menor)
+    console.log (" El numero mayor es : " + mayor)
+}
+console.log("3. Determinar entre tres numeros cual es el mayor y el menor")
+num1 = Number(prompt("ingrese el primer numero"))
+num2 = Number(prompt("ingrese el segundo numero"))
+num3 = Number(prompt("ingrese el tercer numero"))
+
+numeros(num1, num2, num3)
+            break     
+            case 4: //FUNCION 4
+    function operacion(numA, numB){
+    // si numA es menor que numB sumarlos sino restarlos
+
+if (numA < numB ) {
+    suma = numA + numB
+    console.log(" El resultado de la suma es: " + suma)
+}
+else {
+    resta = numA - numB
+    console.log (" El resultado de la resta es: " + resta)
+}
+}
+console.log("4. Dados dos numeros restar o sumar")
+numA = Number(prompt("Ingrese un numero: "))
+numB = Number(prompt("Ingrese otro numero: "))
+
+operacion(numA, numB)
+            break     
+            case 5: //FUNCION 5
+    function cociente(num1, num2){
+    if (num2 <= 0) {
+        console.log (" La division con cero no es posible ")
+    }
+    else {
+        cociente = num1 / num2
+        console.log(" El cociente entre " + num1 + " y " + num2 + " es: " + cociente)
+    }
+}
+console.log("5. cociente de dos numeros")
+num1 /* dividendo */ = Number(prompt("Escriba el primer numero el cual sera el dividendo: ")) 
+num2 /* divisor */ = Number(prompt("Escriba el segundo numero el cual sera el divisor: ")) 
+
+cociente(num1, num2)
+            break        
+            case 6: //FUNCION 6
+        function sumaMulti(num1, num2){
+    // Si hay un numero negativo se suman de lo contrario se multiplica
+
+if (num1 > 0 & num2 > 0) {
+    multiplicacion = num1 * num2 
+    console.log(" como no existe ningun numero negativo, el resultado de la multiplicacion es :" + multiplicacion)
+}
+
+else {
+    suma = num1 + num2
+    console.log(" como si existe un numero negativo, el resultado de la suma es :" + suma)
+}
+
+}
+console.log("6. Suma o multiplicacionde dos numeros")
+console.log(" Ingrese dos numeros diferentes")
+
+ num1 = Number(prompt("Ingrese un numero: "))
+ num2 = Number(prompt("Ingrese otro numero: "))
+
+sumaMulti(num1, num2)
+            break        
+            case 7: //FUNCION 7
+    function bisiesto(year){
+    if ((year % 4==0) & (year % 100 != 0 || year % 400 == 0)) {
+        console.log (" El año ingresado es bisiesto")
+    }
+    else {
+        console.log(" El año ingresado no es bisiesto")
+    }
+}
+console.log("6. año bisiesto")
+year = Number(prompt("Ingrese un año para saber si es bisiesto o no: "))
+
+bisiesto(year)
+            break       
+            default:
+            console.log("Hasta luego")
+        }
+            break
+            case 3:
+            elecion2 = Number(prompt("Elija el ejercicio que desea ver\
+            1. Numeros multiplos de 3 del 1 hasta el 100\
+            2. Numeros impares del 0 al 100\
+            3. Imprimir los números pares del 1 al 100\
+            4. Cuadrados del 1 al 100\
+            5. Suma de los cuadrados del 1 al 100\
+            6. Orden ascendente entre dos numeros\
+            7. Sumar numeros mientras no sea cero\
+            0. Volver"))
+            switch (elecion2){
+            case 1: //FUNCION 1
+            function multiplos(){
+   
+   for (let i = 0; i < 101; i+=3) {
+       console.log(i);
+     } 
+   }
+   console.log ("1. Numeros multiplos de 3 del 1 hasta el 100")
+   
+   multiplos()
+            break
+            case 2: //FUNCION 2
+            function impares(){
+    for (let i = 1; i < 101; i++) {
+        if (i % 2 === 1)
+        console.log(i);
+      }
+}
+console.log("2. Numeros impares del 0 al 100")
+impares()
+            break
+            case 3: //FUNCION 3
+            function pares(){
+    for (let i = 0; i < 101; i+=2) {
+        console.log(i);
+      }
+    
+    // si comienza desde le numero 1 no se pueden imprimir los numeros pares
+}
+
+console.log("3. Numeros pares del 1 al 100")
+
+pares()
+            break
+            case 4: //FUNCION 4
+            function elevado(){
+    for (let i = 1; i < 31; i++) {
+        console.log(i*i);
+      }
+}
+console.log("4. cuadrados de los numeros del 1 al 100")
+
+elevado()
+            break
+            case 5: //FUNCION 5
+            function Sumacuadrados(){
+    let suma = 0
+for (let i = 1; i < 101; i++) {
+  suma = suma + (i*i)
+  console.log(suma);
+}
+}
+console.log("5. Suma de los cuadrados del 1 al 100")
+Sumacuadrados()
+            break
+            case 6: //FUNCION 6
+            function orden(){
+    for (let i = num1; i <= num2; i++) {
+        console.log(i)
+      }
+      for (let n = num2; n <= num1; n++) {
+        if (num2 < num1)
+        console.log(n)
+      }
+}
+console.log("6. Orden ascendente entre dos numeros")
+num1 = Number(prompt("Ingrese el primer numero: "))
+num2 = Number(prompt("Ingrese el segundo numero: "))
+
+orden()
+            break
+            case 7: //FUNCION 7
+            function SumaNumeros(){var n = 1
+var adicion = 0
+
+num = Number(prompt("Introduzca numeros y cero para terminar: "))
+if (num === 0){
+console.log("no se pude realizar la suma")
+} else {
+
+    while (n <= 3){
+        num = Number(prompt("Introduzca numeros y cero para terminar: "))
+        adicion = adicion + num
+        n++
+    }
+}
+console.log (adicion)
+}
+
+SumaNumeros()
+            break
+            default:
+            console.log("Hasta luego")
+        }
+            break
+
+        case 0:
+        alert("Hasta luego")
+
+        default: 
+        console.log("Hasta luego")
+        }
+
+    }while (opcion!=0)
+    /* Instructor Erik este menu se ejecuta por chrome o edge, en donde se muestra el menu de opciones, 
+    pero los resultados se visualizan
+    por la consola de depuracion */
+</script>
+
+</body>
+</html>
